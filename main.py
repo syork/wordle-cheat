@@ -45,15 +45,15 @@ def main(word_list, patterns):
     letters = []
     matches = []
 
-    words = open('word_list', 'r')
-    for line in words:
-        line = line.strip('\n')
-        if repattern.search(line) and cpattern.search(line):
-            matches.append({'word': line, 'strength': 0})
-            letters.extend([l for l in line if l not in pattern])
-        else:
-            #print('no match yet')
-            pass
+    with open(word_list, 'r') as words:
+        for line in words:
+            line = line.strip('\n')
+            if repattern.search(line) and cpattern.search(line):
+                matches.append({'word': line, 'strength': 0})
+                letters.extend([l for l in line if l not in pattern])
+            else:
+                #print('no match yet')
+                pass
 
     # most popular remaining letters
     pop_remaining = Counter(letters).most_common()
