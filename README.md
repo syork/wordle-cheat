@@ -5,9 +5,9 @@ A simple tool to beat the wordle odds
 ### Usage
 You will need a word list. Perhaps https://github.com/dwyl/english-words
 
-Pass a pathname to the word list to the script using the `--words_list` argument then guess your first word
+Pass a pathname for word list to the script using the `--words_list` argument, then guess your first word
 
-With the results of your first word, create a pattern string, and pass it in with the `--pattern` argument
+With the result of your first word, create a pattern string, and pass it in with the `--pattern` argument
 
 #### The pattern argument
 
